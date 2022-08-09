@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: postgres-service
+  name: postgres-service
+spec:
+  externalName: ostock-aws.cnx9dqq5rczz.ap-southeast-1.rds.amazonaws.com
+  selector:
+    app: postgres-service
+  type: ExternalName
+status:
+  loadBalancer: {}
